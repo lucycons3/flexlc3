@@ -1,0 +1,55 @@
+/*
+Theme Name: FlexLC3
+Theme URI: https://lucycons3.eu;
+Author: LC3 Team
+Author URI: https://lucycons3.eu;
+Description: 
+Version: 0.1
+License:
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain:
+
+*/
+
+h2 p {
+	color:black;
+}
+
+p.fechajumbo {
+	font-size:12px;
+}
+
+p.resumenjumbo {
+	font-size:14px;
+}
+
+a:hover {
+	color:grey;
+	text-decoration:none;
+}
+
+a{
+	color:darkslategrey;
+}
+.encate {
+	text-align:justify;
+	padding:0%;
+	margin-bottom:0%;
+	height:175px;
+	overflow:visible;
+}
+
+.fondopre {
+	background-image:url('<?php echo atrib_imagen_destacada();?>');
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-attachment: local;
+	background-size: 100% auto;	
+}
+
+.opac{
+	background:rgba(255,255,255,0.6);
+	color:rgb(0,0,0);
+	height:100%;
+}
