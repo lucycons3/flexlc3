@@ -3,47 +3,53 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<title><?php bloginfo('name'); ?></title>
+		
 		<link rel="shortcut icon" href="<?php bloginfo( 'template_url'); ?>/favicon.ico" />
 		
-		<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-		<link rel=stylesheet href="<?php bloginfo( 'template_url'); ?>/css/bootstrap.css">
-		<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
-		<LINK REL=StyleSheet HREF="<?php bloginfo( 'stylesheet_url'); ?>" TYPE="text/css">
+		<LINK REL=stylesheet HREF="<?php bloginfo( 'stylesheet_url'); ?>" TYPE="text/css">
 		
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+		<?php
+		#twitter cards hack
+		if(is_single() || is_page()) {
+		  $twitter_url    = get_permalink();
+		 $twitter_title  = get_the_title();
+		 $twitter_desc   = get_the_excerpt();
+		   $twitter_thumbs = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), "full" );
+		    $twitter_thumb  = $twitter_thumbs[0];
+		      if(!$twitter_thumb) {
+		      $twitter_thumb = 'http://www.gravatar.com/avatar/8eb9ee80d39f13cbbad56da88ef3a6ee?rating=PG&size=75';
+		    }
+		  $twitter_name   = str_replace('@', '', get_the_author_meta('twitter'));
+		?>
+		<meta name="twitter:card" value="summary" />
+		<meta name="twitter:url" value="<?php echo $twitter_url; ?>" />
+		<meta name="twitter:title" value="<?php echo $twitter_title; ?>" />
+		<meta name="twitter:description" value="<?php echo $twitter_desc; ?>" />
+		<meta name="twitter:image" value="<?php echo $twitter_thumb; ?>" />
+		<?
+		  if($twitter_name) {
+		?>
+		<meta name="twitter:creator" value="@<?php echo $twitter_name; ?>" />
+		<?
+		  }
+		}
+		?>
+
   	</head>
 
 	<body>
-		<div class="container-fluid">
-			<nav class="navbar navbar-default">
-				<div class="container-fluid" style="background:white; color:black;padding-top:1%;">
-				     	<div class="navbar-header">
-						      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-						        <span class="sr-only">Toggle navigation</span>
-						        <span class="icon-bar"></span>
-						        <span class="icon-bar"></span>
-						        <span class="icon-bar"></span>
-						      </button>
-					      <a class="navbar-brand" href="<?php bloginfo( 'home' ); ?>" style="color:#ddd;">
-					      
-					      <?php the_custom_logo(); ?>
+	<header>
+		<div class="topnav" id="myTopnav" style="margin:0% auto;">
+	 		<?php the_custom_logo()?>
+	 		<?php wp_nav_menu(array(
+		 		'container' => 'ul',
+		 		'menu_class' => 'top-nav',
+		 		'theme_location'=> 'cabecera')
+		 		);
+	 	 	?>
+			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	 			<i class="fa fa-bars"></i>
+	 		</a>
+		</div>
 
-					      </a>
-					    </div>
-				    	<div class="collapse navbar-collapse"  id="bs-example-navbar-collapse-1" aria-expanded="false" style="height: 1px;">
-					        <?php wp_nav_menu(array(
-					        	'container'=>'ul',
-					        	'menu_class'=>'nav navbar-nav',
-					        	'theme_location'=>'arriba')
-					        	); 
-					        ?>
-					    	<ul class="nav navbar-nav navbar-right">
-					   			<li><a href="#"><img src="https://lucycons3.eu/wp-content/themes/flexlc3/images/twitter.png" height="20px"></img></a></li>
-					   			<li><a href="#"><img src="https://lucycons3.eu/wp-content/themes/flexlc3/images/pinterest.png" height="30px"></img></a></li>
-					   			<li><a href="#"><img src="https://lucycons3.eu/wp-content/themes/flexlc3/images/linkedin.svg" height="20px"></img></a></li>
-					      	</ul>
-				    	</div>
-				  </div>
-			</nav>
-			<hr>
+	</header>

@@ -1,11 +1,12 @@
 <?php get_header(); ?>	
-		<div class="col-md-12">	
+		<div class="prede">	
 			<?php if (have_posts() ):while ( have_posts() ): the_post(); ?>
 	<!--IMPRIMIR POST-->
-				<h2><?php the_title(); ?></h2>
+				<h1><?php the_title(); ?></h1>
 				<p><?php the_content();?></p>
 			<?php endwhile; else: ?>
 				<p><?php _e('No hay entradas.'); ?></p>
-			<?php endif; ?>
+			<?php endif; ?>	
+		</div>
 
 <?php get_footer(); ?>
