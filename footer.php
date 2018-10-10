@@ -6,9 +6,9 @@
                                 'theme_location'=>'abajo')
                                 ); 
                             ?>
-        <ul class="creditos" style="padding-right:2%">
-        <a href="https://github.com/lucycons3/flexlc3">Tema realizado por LC3</a>
-        </ul>
+        <div class="creditos" style="padding-right:2%">
+			<p><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Licencia CC BY-NC-SA 4.0</a> | <a href="https://github.com/lucycons3/flexlc3">Tema</a> realizado por <a href="https://www.lucycons3.eu">LC3</a></p>
+        </div>
         <div style="margin-bottom:2%;"></div>
         	<script>
 				function myFunction() {
