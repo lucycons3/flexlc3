@@ -8,7 +8,6 @@ register_nav_menu( "sidebar", "Sidebar");
 //Cabecera
 add_theme_support( 'custom-header' );
 
-
 //Habilitar thumbnails
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(1600, 910, true);
@@ -107,3 +106,11 @@ function pagination($pages = '', $range = 4)
      }
 }
 add_action( 'after_setup_theme', 'pagination' );
+
+function mytheme_customize_register( $wp_customize ) {
+   $wp_customize->add_setting( 'header_textcolor' , array(
+    'default'   => '#000000',
+    'transport' => 'refresh',
+) );
+}
+add_action( 'customize_register', 'mytheme_customize_register' );

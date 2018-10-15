@@ -8,6 +8,10 @@
 		
 		<LINK REL=stylesheet HREF="<?php bloginfo( 'stylesheet_url'); ?>" TYPE="text/css">
 		
+		<style type="text/css">
+			h1{color:#<?php echo get_theme_mod('header_textcolor', '000000'); ?>;}
+		</style>
+		
 		<?php
 		#twitter cards hack
 		if(is_single() || is_page()) {
