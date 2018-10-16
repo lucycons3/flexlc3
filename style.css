@@ -573,8 +573,23 @@ input.search-field:focus{
     margin: 0 40%;
 }
 
-.has-2-columns .wp-block-column{
-	width:50%;
+.wp-block-columns.has-2-columns {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+.wp-block-column{
+	display:inline-block;
+	margin:1%;
+}
+
+.columna-proyectos img{
+	transition:all ease 0.3s;
+}
+
+.columna-proyectos:hover img {
+	opacity:0.5;
+	
 }
 
 .alignright.is-resized {
@@ -623,6 +638,19 @@ input.search-field:focus{
 
 .comment-respond {
     margin-top: 30%;
+}
+
+/*Portfolio*/
+
+.columna-proyectos {
+	cursor: pointer;
+	border: 1px solid #eee;
+	transition: 0.3s all ease;
+}
+
+.columna-proyectos:hover {
+	background:#eee;
+	border:1px solid transparent;
 }
 
 @media screen and (max-width: 800px) {
