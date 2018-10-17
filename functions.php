@@ -108,9 +108,90 @@ function pagination($pages = '', $range = 4)
 add_action( 'after_setup_theme', 'pagination' );
 
 function mytheme_customize_register( $wp_customize ) {
+
+	//color del h1
+	
    $wp_customize->add_setting( 'header_textcolor' , array(
     'default'   => '#000000',
     'transport' => 'refresh',
-) );
+	));
+
+	// color de los links
+		
+	$wp_customize->add_setting('link_textcolor', array(
+	'default' => '#b65864',
+	'type' => 'theme_mod',
+	'transport' => 'refresh'	
+	));
+	
+	$wp_customize->add_control(new WP_Customize_Color_Control(
+		$wp_customize,
+		'my_theme_link_textcolor',
+		array(
+			'label' => __( 'Color de los links', 'mytheme' ),
+			'settings'   => 'link_textcolor',
+			'priority'   => 10,
+			'section'    => 'colors',		
+		)	
+	));
+	
+	// color:hover de los links
+		
+	$wp_customize->add_setting('linkhover_textcolor', array(
+	'default' => '#55a2b4',
+	'type' => 'theme_mod',
+	'transport' => 'refresh'	
+	));
+	
+	$wp_customize->add_control(new WP_Customize_Color_Control(
+		$wp_customize,
+		'my_theme_linkhover_textcolor',
+		array(
+			'label' => __( 'Color hover de los links', 'mytheme' ),
+			'settings'   => 'linkhover_textcolor',
+			'priority'   => 10,
+			'section'    => 'colors',		
+		)	
+	));
+	
+	// background
+		
+	$wp_customize->add_setting('background_color', array(
+	'default' => '#f6f1ec',
+	'type' => 'theme_mod',
+	'transport' => 'refresh'	
+	));
+	
+	$wp_customize->add_control(new WP_Customize_Color_Control(
+		$wp_customize,
+		'my_theme_background_color',
+		array(
+			'label' => __( 'Color de fondo', 'mytheme' ),
+			'settings'   => 'background_color',
+			'priority'   => 1,
+			'section'    => 'colors',		
+		)	
+	));
+	
+	//base_textcolor (p)
+	
+	$wp_customize->add_setting('base_textcolor', array(
+	'default' => '#000',
+	'type' => 'theme_mod',
+	'transport' => 'refresh'	
+	));
+	
+	$wp_customize->add_control(new WP_Customize_Color_Control(
+		$wp_customize,
+		'my_theme_base_textcolor',
+		array(
+			'label' => __( 'Color de texto', 'mytheme' ),
+			'settings'   => 'base_textcolor',
+			'priority'   => 2,
+			'section'    => 'colors',		
+		)	
+	));
 }
 add_action( 'customize_register', 'mytheme_customize_register' );
+
+
