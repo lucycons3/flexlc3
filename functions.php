@@ -5,6 +5,24 @@ register_nav_menu( "arriba", "Arriba" );
 register_nav_menu( "abajo", "Abajo" );
 register_nav_menu( "sidebar", "Sidebar");
 
+// Register Sidebars
+function custom_sidebar() {
+
+	$args = array(
+		'id'            => 'sidebar-lateral',
+		'name'          => __( 'Sidebar lateral', 'sidebar-lateral' ),
+		'description'   => __( 'Aparece en el lado.', 'sidebar-lateral' ),
+		'before_title'  => '<h3>',
+		'after_title'   => '</h3>',
+		'before_widget' => '<div id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</div>',
+	);
+	register_sidebar( $args );
+
+}
+add_action( 'widgets_init', 'custom_sidebar' );
+
+
 //Cabecera
 add_theme_support( 'custom-header' );
 

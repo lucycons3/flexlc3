@@ -1,6 +1,10 @@
 <!Doctype html>
 <html>
 	<head>
+		<link rel="canonical" href="<?php bloginfo('url');?>">
+		<link rel="alternate" href="<?php bloginfo('url');?>" hreflang="es">
+		<link rel="alternate" href="<?php bloginfo('url');?>/en" hreflang="en">
+		
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<title><?php bloginfo('name'); ?></title>
 		
