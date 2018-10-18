@@ -38,11 +38,11 @@
 		<meta name="twitter:title" value="<?php echo $twitter_title; ?>" />
 		<meta name="twitter:description" value="<?php echo $twitter_desc; ?>" />
 		<meta name="twitter:image" value="<?php echo $twitter_thumb; ?>" />
-		<?
+		<?php
 		  if($twitter_name) {
 		?>
 		<meta name="twitter:creator" value="@<?php echo $twitter_name; ?>" />
-		<?
+		<?php
 		  }
 		}
 		?>
