@@ -39,7 +39,7 @@
 				?>
 				
 				<?php else:  ?>
-				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+				<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','es' ); ?></p>
 				<?php endif; ?>
 			</div>
 

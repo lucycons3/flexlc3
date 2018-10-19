@@ -29,7 +29,7 @@
 							?>
 							
 							<?php else:  ?>
-							<p><?php _e( 'Lo siento, no encontramos ningún resultado.' ); ?></p>
+							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','es' ); ?></p>
 							<?php endif; ?>
 					</div>
 				</div>

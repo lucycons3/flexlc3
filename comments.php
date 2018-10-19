@@ -5,37 +5,37 @@
   'id_submit'         => 'submit',
   'class_submit'      => 'submit',
   'name_submit'       => 'submit',
-  'title_reply'       => __( 'Leave a Reply' ),
-  'title_reply_to'    => __( 'Leave a Reply to %s' ),
-  'cancel_reply_link' => __( 'Cancel Reply' ),
-  'label_submit'      => __( 'Post Comment' ),
+  'title_reply'       => __( 'Dejar una respuesta','es' ),
+  'title_reply_to'    => __( 'Dejar una respuesta a %s','es' ),
+  'cancel_reply_link' => __( 'Cancelar respuesta','es' ),
+  'label_submit'      => __( 'Dejar comentario', 'es' ),
   'format'            => 'xhtml',
 
-  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comment', 'noun' ) .
+  'comment_field' =>  '<p class="comment-form-comment"><label for="comment">' . _x( 'Comentar', 'noun', 'es' ) .
     '</label><textarea id="comment" name="comment" cols="45" rows="8" aria-required="true">' .
     '</textarea></p>',
 
   'must_log_in' => '<p class="must-log-in">' .
     sprintf(
-      __( 'You must be <a href="%s">logged in</a> to post a comment.' ),
+      __( 'Debes de estar <a href="%s">autenticado</a> para comentar.','es' ),
       wp_login_url( apply_filters( 'the_permalink', get_permalink() ) )
     ) . '</p>',
 
   'logged_in_as' => '<p class="logged-in-as">' .
     sprintf(
-    __( 'Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a>' ),
+    __( 'Autenticado como <a href="%1$s">%2$s</a>. <a href="%3$s" title="Salir de la cuenta">¿Salir?</a>','es' ),
       admin_url( 'profile.php' ),
       $user_identity,
       wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
     ) . '</p>',
 
   'comment_notes_before' => '<p class="comment-notes">' .
-    __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) .
+    __( 'No publicaremos tu correo electrónico.','es' ) . ( $req ? $required_text : '' ) .
     '</p>',
 
   'comment_notes_after' => '<p class="form-allowed-tags">' .
     sprintf(
-      __( 'You may use these <abbr title="HyperText Markup Language">HTML</abbr> tags and attributes: %s' ),
+      __( 'Puedes utilizar estas etiquetas y atributos <abbr title="HyperText Markup Language">HTML</abbr>: %s','es' ),
       ' <code>' . allowed_tags() . '</code>'
     ) . '</p>',
 
