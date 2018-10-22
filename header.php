@@ -1,9 +1,9 @@
 <!Doctype html>
 <html>
 	<head>
-		<link rel="canonical" href="<?php bloginfo('url');?>">
-		<link rel="alternate" href="<?php bloginfo('url');?>" hreflang="es">
-		<link rel="alternate" href="<?php bloginfo('url');?>/en" hreflang="en">
+		<link rel="canonical" href="<?php echo esc_url( home_url() );?>">
+		<link rel="alternate" href="<?php echo esc_url( home_url() );?>" hreflang="es">
+		<link rel="alternate" href="<?php echo esc_url( home_url() );?>/en" hreflang="en">
 		
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<title><?php bloginfo('name'); ?></title>
@@ -13,11 +13,11 @@
 		<LINK REL=stylesheet HREF="<?php bloginfo( 'stylesheet_url'); ?>" TYPE="text/css">
 		
 		<style type="text/css">
-			*{color:<?php echo get_theme_mod('base_textcolor', '000000'); ?>;}
+			*{color:#<?php echo get_theme_mod('base_textcolor', '000000'); ?>;}
 			body{background-color:#<?php echo get_theme_mod('background_color', '000000'); ?>;}
 			h1{color:#<?php echo get_theme_mod('header_textcolor', '000000'); ?>;}
-			a, .topnav a{color:<?php echo get_theme_mod('link_textcolor', '000000'); ?>;}
-			a:hover, .topnav a:hover{color:<?php echo get_theme_mod('linkhover_textcolor', '000000'); ?>;}
+			a, .topnav a{color:#<?php echo get_theme_mod('link_textcolor', '000000'); ?>;}
+			a:hover, .topnav a:hover{color:#<?php echo get_theme_mod('linkhover_textcolor', '000000'); ?>;}
 		</style>
 		
 		<?php
