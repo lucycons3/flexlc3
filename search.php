@@ -17,11 +17,7 @@
 								</div>
 							</div>
 							<?php endwhile; ?>
-						<div class="">
-							<?php if (function_exists("pagination")) {
-				   		 pagination($the_query->max_num_pages);
-							} ?>
-						</div>
+						<div class="paginacion"><?php posts_nav_link(' &bull; ','<span class="ultimos">&laquo; Últimos posts</span>','<span class="antiguos">Posts antiguos &raquo;</span>'); ?></div>
 							
 							<?php 
 							// clean up after the query and pagination
@@ -29,7 +25,7 @@
 							?>
 							
 							<?php else:  ?>
-							<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','es' ); ?></p>
 							<?php endif; ?>
 					</div>
 				</div>

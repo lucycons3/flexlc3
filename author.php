@@ -3,22 +3,7 @@
 					<?php get_sidebar(); ?>
 		</div>
 		<div class="col-10" style="padding-left:15%">	
-			<?php
-				// set the "paged" parameter (use 'page' if the query is on a static front page)
-				$paged = ( get_query_var( 'paged' ) ) ? get_query_var( 'paged' ) : 1;
-				
-				// the query
-				$the_query = new WP_Query( array(
-	                'posts_per_page' => 6,
-	                'paged'=>$paged
-	            ) ); 
-				?>
-				<?php if ( $the_query->have_posts() ) : ?>
-				
-				<?php
-				// the loop
-				while ( $the_query->have_posts() ) : $the_query->the_post(); 
-				?>
+				<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 				<div class="col-6 entrada" style="background-image:url('<?php echo atrib_imagen_destacada();?>');background-position: center center;background-repeat: no-repeat; background-attachment: fixed;background-size:cover;word-break:normal;">
 					<div class="post">								
 						<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
@@ -27,19 +12,15 @@
 					</div>
 				</div>
 				<?php endwhile; ?>
-			<div class="">
-				<?php if (function_exists("pagination")) {
-	   		 pagination($the_query->max_num_pages);
-				} ?>
-			</div>
-				
+				<div class="paginacion"><?php posts_nav_link(' &bull; ','<span class="ultimos">&laquo; Últimos posts</span>','<span class="antiguos">Posts antiguos &raquo;</span>'); ?></div>
+			
 				<?php 
 				// clean up after the query and pagination
 				wp_reset_postdata(); 
 				?>
 				
 				<?php else:  ?>
-				<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+				<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','es' ); ?></p>
 				<?php endif; ?>
 			</div>
 

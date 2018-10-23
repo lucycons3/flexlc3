@@ -17,11 +17,28 @@
 								</div>
 							</div>
 							<?php endwhile; ?>
-						<div class="">
-							<?php if (function_exists("pagination")) {
-				   		 pagination($the_query->max_num_pages);
-							} ?>
-						</div>
+							
+							<?php $args = array(
+								'base'               => '%_%',
+								'format'             => '?paged=%#%',
+								'total'              => 1,
+								'current'            => 0,
+								'show_all'           => false,
+								'end_size'           => 1,
+								'mid_size'           => 2,
+								'prev_next'          => true,
+								'prev_text'          => __('« Anterior','es'),
+								'next_text'          => __('Siguiente »','es'),
+								'type'               => 'plain',
+								'add_args'           => false,
+								'add_fragment'       => '',
+								'before_page_number' => '',
+								'after_page_number'  => ''
+							); 
+							
+							echo wp_link_pages($args);?>
+
+						<div class="paginacion"><?php posts_nav_link(' &bull; ','<span class="ultimos">&laquo; Últimos posts</span>','<span class="antiguos">Posts antiguos &raquo;</span>'); ?></div>
 							
 							<?php 
 							// clean up after the query and pagination
@@ -29,7 +46,7 @@
 							?>
 							
 							<?php else:  ?>
-							<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','es' ); ?></p>
 							<?php endif; ?>
 					</div>
 				</div>
