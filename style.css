@@ -1,14 +1,14 @@
 /*
 Theme Name: FlexLC3
-Theme URI: https://lucycons3.eu;
+Theme URI: https://github.com/lucycons3/flexlc3;
 Author: LC3 Team
 Author URI: https://lucycons3.eu;
-Description: 
+Description: This is the first theme developed by LC3. 
 Version: 0.1
-License:
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Tags: 
-Text Domain:
+License: GNU General Public License v4
+License URI: https://creativecommons.org/licenses/by-nc-sa/4.0/
+Tags: two-columns, left-sidebar, custom-colors, custom-header, custom-logo, custom-menu, featured-images, theme-options, blog, news
+Text Domain: flexlc3
 
 */
 
@@ -273,7 +273,7 @@ footer {
 	bottom:0;
 	width:99%;
   position: absolute;
-  height: 40px;
+  height: 1px;
 }
 
 .navbar-toggle {
@@ -598,7 +598,7 @@ input.search-field:focus{
 }
 
 /* Pagination */
-.pagination {
+.paginacion {
     clear:both;
     position:relative;
     font-size:1.2em; /* Pagination text size */
@@ -607,7 +607,7 @@ input.search-field:focus{
     margin:2%;
 }
  
-.pagination span, .pagination a {
+.paginacion span, .paginacion a {
     display:block;
     float:left;
     margin: 2px 2px 2px 0;
@@ -615,20 +615,20 @@ input.search-field:focus{
     text-decoration:none;
     width:auto;
     color:#fff; /* Pagination text color */
-    background: #555; /* Pagination non-active background color */
+	 background: #555; /* Pagination non-active background color */
     -webkit-transition: background .15s ease-in-out;
     -moz-transition: background .15s ease-in-out;
     -ms-transition: background .15s ease-in-out;
     -o-transition: background .15s ease-in-out;
     transition: background .15s ease-in-out;
 }
- 
-.pagination a:hover{
+ .paginacion span{background:transparent;}
+.paginacion a:hover{
     color:#fff;
     background: #ffbc1e; /* Pagination background on hover */
 }
  
-.pagination .current{
+.paginacion .current{
     padding:12px 15px 9px 15px;
     background: #ffbc1e; /* Current page background */
     color:#fff;

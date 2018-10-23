@@ -5,7 +5,7 @@
 				<h1><?php the_title(); ?></h1>
 				<p><?php the_content();?></p>
 			<?php endwhile; else: ?>
-				<p><?php _e('No hay entradas.'); ?></p>
+				<p><?php _e('No hay entradas.', 'es'); ?></p>
 			<?php endif; ?>	
 		</div>
 

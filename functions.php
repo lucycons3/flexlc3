@@ -10,8 +10,8 @@ function custom_sidebar() {
 
 	$args = array(
 		'id'            => 'sidebar-lateral',
-		'name'          => __( 'Sidebar lateral', 'sidebar-lateral' ),
-		'description'   => __( 'Aparece en el lado.', 'sidebar-lateral' ),
+		'name'          => __( 'Sidebar lateral', 'es' ),
+		'description'   => __( 'Aparece en el lado.', 'es' ),
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -53,10 +53,9 @@ function atrib_imagen_destacada() {
     return $imgDestacada[0]; // 0 = ruta, 1 = altura, 2 = anchura, 3 = boolean
 }
 
-add_action( 'after_setup_theme', 'woocommerce_support' );
-function woocommerce_support() {
-    add_theme_support( 'woocommerce' );
-}
+/*Comments*/
+
+/* Gutenberg*/
 
 add_theme_support( 'gutenberg', array(
  
@@ -125,12 +124,13 @@ function pagination($pages = '', $range = 4)
 }
 add_action( 'after_setup_theme', 'pagination' );
 
-function mytheme_customize_register( $wp_customize ) {
+function FlexLC3_customize_register( $wp_customize ) {
 
 	//color del h1
 	
    $wp_customize->add_setting( 'header_textcolor' , array(
     'default'   => '#000000',
+    'sanitize_callback' => 'sanitize_hex_color_no_hash',
     'transport' => 'refresh',
 	));
 
@@ -138,6 +138,7 @@ function mytheme_customize_register( $wp_customize ) {
 		
 	$wp_customize->add_setting('link_textcolor', array(
 	'default' => '#b65864',
+   'sanitize_callback' => 'sanitize_hex_color_no_hash',
 	'type' => 'theme_mod',
 	'transport' => 'refresh'	
 	));
@@ -146,7 +147,7 @@ function mytheme_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_link_textcolor',
 		array(
-			'label' => __( 'Color de los links', 'mytheme' ),
+			'label' => __( 'Color de los links', 'es' ),
 			'settings'   => 'link_textcolor',
 			'priority'   => 10,
 			'section'    => 'colors',		
@@ -157,6 +158,7 @@ function mytheme_customize_register( $wp_customize ) {
 		
 	$wp_customize->add_setting('linkhover_textcolor', array(
 	'default' => '#55a2b4',
+   'sanitize_callback' => 'sanitize_hex_color_no_hash',
 	'type' => 'theme_mod',
 	'transport' => 'refresh'	
 	));
@@ -165,7 +167,7 @@ function mytheme_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_linkhover_textcolor',
 		array(
-			'label' => __( 'Color hover de los links', 'mytheme' ),
+			'label' => __( 'Color hover de los links', 'es' ),
 			'settings'   => 'linkhover_textcolor',
 			'priority'   => 10,
 			'section'    => 'colors',		
@@ -176,6 +178,7 @@ function mytheme_customize_register( $wp_customize ) {
 		
 	$wp_customize->add_setting('background_color', array(
 	'default' => '#f6f1ec',
+   'sanitize_callback' => 'sanitize_hex_color_no_hash',
 	'type' => 'theme_mod',
 	'transport' => 'refresh'	
 	));
@@ -184,7 +187,7 @@ function mytheme_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_background_color',
 		array(
-			'label' => __( 'Color de fondo', 'mytheme' ),
+			'label' => __( 'Color de fondo', 'es' ),
 			'settings'   => 'background_color',
 			'priority'   => 1,
 			'section'    => 'colors',		
@@ -196,6 +199,7 @@ function mytheme_customize_register( $wp_customize ) {
 	$wp_customize->add_setting('base_textcolor', array(
 	'default' => '#000',
 	'type' => 'theme_mod',
+   'sanitize_callback' => 'sanitize_hex_color_no_hash',
 	'transport' => 'refresh'	
 	));
 	
@@ -203,13 +207,13 @@ function mytheme_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_base_textcolor',
 		array(
-			'label' => __( 'Color de texto', 'mytheme' ),
+			'label' => __( 'Color de texto', 'es' ),
 			'settings'   => 'base_textcolor',
 			'priority'   => 2,
 			'section'    => 'colors',		
 		)	
 	));
 }
-add_action( 'customize_register', 'mytheme_customize_register' );
+add_action( 'customize_register', 'FlexLC3_customize_register' );
 
 
