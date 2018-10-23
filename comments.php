@@ -1,5 +1,5 @@
  <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
-
+ <?php wp_list_comments();?>
 <?php
 	$args = array(
   'id_form'           => 'commentform',
@@ -25,7 +25,7 @@
 
   'logged_in_as' => '<p class="logged-in-as">' .
     sprintf(
-    __( '<img src="<?php get_avatar;?>" />Autenticado como <a href="%1$s">%2$s</a>. <a href="%3$s" title="Salir de la cuenta">¿Salir?</a>','es' ),
+    __( 'Autenticado como <a href="%1$s">%2$s</a>. <a href="%3$s" title="Salir de la cuenta">¿Salir?</a>','es' ),
       admin_url( 'profile.php' ),
       $user_identity,
       wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
@@ -47,5 +47,9 @@
 comment_form(
 		
 	);
+
+	
+	
+	
 	
 ?>
