@@ -1,5 +1,5 @@
 <!Doctype html>
-<html>
+<html <?php language_attributes(); ?>>
 	<head>
 		<link rel="canonical" href="<?php echo esc_url( home_url() );?>">
 		<link rel="alternate" href="<?php echo esc_url( home_url() );?>" hreflang="es">
