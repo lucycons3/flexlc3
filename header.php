@@ -63,5 +63,5 @@
 	 			<i class="fa fa-bars"></i>
 	 		</a>
 		</div>
-
+		<?php wp_head();?>
 	</header>
