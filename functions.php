@@ -26,6 +26,11 @@ add_action( 'widgets_init', 'custom_sidebar' );
 //Cabecera
 add_theme_support( 'custom-header' );
 
+//Ancho de los contenidos
+if ( ! isset( $content_width ) ) {
+	$content_width = 600;
+}
+
 //Habilitar thumbnails
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(1600, 910, true);
