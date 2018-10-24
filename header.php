@@ -49,7 +49,7 @@
 
   	</head>
 
-	<body>
+	<body <?php body_class(); ?>>
 	<header>
 		<div class="topnav" id="myTopnav" style="margin:0% auto;">
 	 		<?php the_custom_logo()?>
