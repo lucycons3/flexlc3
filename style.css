@@ -471,7 +471,7 @@ input.search-field:focus{
   }
   
   .alignfull{
-	margin-left: calc(35% - 50vw);
+	margin-left: calc(50% - 50vw);
 	margin-right: calc(50% - 50vw);
 	max-width: 205%;
 }
@@ -483,7 +483,6 @@ input.search-field:focus{
  
  figure img {
 	object-fit: cover; 
-	height: 100vw;
 } 
  
  .wp-block-gallery{
@@ -593,6 +592,10 @@ input.search-field:focus{
 .alignright.is-resized {
 	float: right;
 	width: 50%;
+}
+
+.wp-block-image.alignfull img, .wp-block-image.alignwide img {
+	width: 100vw;
 }
 
 /* Pagination */
