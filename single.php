@@ -4,8 +4,8 @@
 				<?php get_sidebar();?>				
 
 		</div>
-		<div class="col-10 ppal">	
 			<?php if (have_posts() ):while ( have_posts() ): the_post(); ?>
+		<div <?php post_class('prede'); ?> id="post-<?php the_ID(); ?>" >
 	<!--IMPRIMIR POST-->
 	<p><?php the_category(" | ");?></p>
 				<h1><?php the_title(); ?></h1>
@@ -22,7 +22,6 @@
 	<!--COMENTARIOS-->
 		<?php comments_template( "comments.php"); ?>
 		</div>
-		<div class="col-md-2"></div>
 		
 
 <?php get_footer(); ?>
