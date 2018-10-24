@@ -6,7 +6,16 @@
 		<link rel="alternate" href="<?php echo esc_url( home_url() );?>/en" hreflang="en">
 		
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
-		<title><?php bloginfo('name'); ?></title>
+		<?php
+			if ( ! function_exists( '_wp_render_title_tag' ) ) {
+				function theme_slug_render_title() {
+			?>
+			<title><?php wp_title( '|', true, 'right' ); ?></title>
+			<?php
+				}
+				add_action( 'wp_head', 'theme_slug_render_title' );
+			}
+		?>
 		
 		<link rel="shortcut icon" href="<?php echo site_icon_url(); ?>" />
 		

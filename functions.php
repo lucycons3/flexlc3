@@ -42,6 +42,10 @@ function theme_prefix_setup() {
 }
 add_action( 'after_setup_theme', 'theme_prefix_setup' );
 
+// Title de la pagina
+
+add_theme_support( 'title-tag' );
+
 /*
  * Función para imprimir la ruta de la imagen destacada.
  * Ejemplo de utilización: echo atrib_imagen_destacada();
