@@ -76,9 +76,13 @@ display:flex;
 #menu-arriba{margin:0}
 .espdeb{margin-bottom:3%}
 
+/* Tipos de post */
+.post 
 .page {
 	margin:0% 20%	;
 }
+
+/* barra de navegación*/
 
 .topnav a {
   float: left;
@@ -342,11 +346,10 @@ input[type="textarea"]:focus{
 	transition:all ease 0.5s;
 }
 
-.post {
+.post_flexlc3 {
 	padding:5%;
 	background: rgba(255,255,255,0.9);
 	height:100%;
-	
 }
 
 .entrada {
