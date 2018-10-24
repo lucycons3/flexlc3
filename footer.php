@@ -20,6 +20,14 @@
 		  		      x.className = "topnav";
 		 		   }
 				}
+				
+				var imagenModificada = document.getElementsByClassName("alignfull");
+				if (imagenModificada.length > 0 ) {
+					for (var i = 0; i < imagenModificada.length; i++){
+						imagenModificada[i].style.minWidth = "100vw";
+						imagenModificada[i].style.margin = "0 calc(50% - 50vw)";
+					}			
+				}
 			</script>
     </footer>
 </html>
