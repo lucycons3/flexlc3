@@ -25,7 +25,7 @@
 							while ( $the_query->have_posts() ) : $the_query->the_post(); 
 							?>
 							<div class="col-6 entrada" style="background-image:url('<?php echo atrib_imagen_destacada();?>');background-position: center center;background-repeat: no-repeat; background-attachment: fixed;background-size:cover;word-break:normal;">
-								<div class="post">								
+								<div class="post_flexlc3">								
 									<h2><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 									<p class="fecha">Publicado el <?php the_time('j \d\e F \d\e Y ');?> por <a><?php the_author_posts_link(); ?></a> en <?php the_category( ', ' ); ?></p>
 									<p><?php the_excerpt();?></p>
