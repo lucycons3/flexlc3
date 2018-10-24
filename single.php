@@ -16,7 +16,7 @@
 			<div class="col-md-5 prevnext" style="float:right;"><strong>Siguiente entrada</strong><br><?php next_post_link('<em>%link</em>'); ?></div>
 		</div>
 			<?php endwhile; else: ?>
-				<p><?php _e('No hay entradas.','es'); ?></p>
+				<p><?php _e('No hay entradas.','flexlc3'); ?></p>
 			<?php endif; ?>
 			<?php if ( function_exists( 'ADDTOANY_SHARE_SAVE_KIT' ) ) { ADDTOANY_SHARE_SAVE_KIT(); } ?>
 	<!--COMENTARIOS-->

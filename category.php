@@ -27,8 +27,8 @@
 								'end_size'           => 1,
 								'mid_size'           => 2,
 								'prev_next'          => true,
-								'prev_text'          => __('« Anterior','es'),
-								'next_text'          => __('Siguiente »','es'),
+								'prev_text'          => __('« Anterior','flexlc3'),
+								'next_text'          => __('Siguiente »','flexlc3'),
 								'type'               => 'plain',
 								'add_args'           => false,
 								'add_fragment'       => '',
@@ -46,7 +46,7 @@
 							?>
 							
 							<?php else:  ?>
-							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','es' ); ?></p>
+							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','flexlc3' ); ?></p>
 							<?php endif; ?>
 					</div>
 				</div>

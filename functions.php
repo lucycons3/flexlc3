@@ -10,8 +10,8 @@ function custom_sidebar() {
 
 	$args = array(
 		'id'            => 'sidebar-lateral',
-		'name'          => __( 'Sidebar lateral', 'es' ),
-		'description'   => __( 'Aparece en el lado.', 'es' ),
+		'name'          => __( 'Sidebar lateral', 'flexlc3' ),
+		'description'   => __( 'Aparece en el lado.', 'flexlc3' ),
 		'before_title'  => '<h3>',
 		'after_title'   => '</h3>',
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
@@ -156,7 +156,7 @@ function FlexLC3_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_link_textcolor',
 		array(
-			'label' => __( 'Color de los links', 'es' ),
+			'label' => __( 'Color de los links', 'flexlc3' ),
 			'settings'   => 'link_textcolor',
 			'priority'   => 10,
 			'section'    => 'colors',		
@@ -176,7 +176,7 @@ function FlexLC3_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_linkhover_textcolor',
 		array(
-			'label' => __( 'Color hover de los links', 'es' ),
+			'label' => __( 'Color hover de los links', 'flexlc3' ),
 			'settings'   => 'linkhover_textcolor',
 			'priority'   => 10,
 			'section'    => 'colors',		
@@ -196,7 +196,7 @@ function FlexLC3_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_background_color',
 		array(
-			'label' => __( 'Color de fondo', 'es' ),
+			'label' => __( 'Color de fondo', 'flexlc3' ),
 			'settings'   => 'background_color',
 			'priority'   => 1,
 			'section'    => 'colors',		
@@ -216,7 +216,7 @@ function FlexLC3_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_base_textcolor',
 		array(
-			'label' => __( 'Color de texto', 'es' ),
+			'label' => __( 'Color de texto', 'flexlc3' ),
 			'settings'   => 'base_textcolor',
 			'priority'   => 2,
 			'section'    => 'colors',		

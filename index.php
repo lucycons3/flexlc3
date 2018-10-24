@@ -44,7 +44,7 @@
 							?>
 							
 							<?php else:  ?>
-							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','es' ); ?></p>
+							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','flexlc3' ); ?></p>
 							<?php endif; ?>
 					</div>
 				</div>
