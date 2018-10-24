@@ -1,3 +1,4 @@
+		<?php wp_footer();?>    
     </body>
     <footer>
                             <?php wp_nav_menu(array(
