@@ -44,11 +44,9 @@
   'fields' => apply_filters( 'comment_form_default_fields', $fields ),
 );
 
-comment_form(
-		
-	);
+	comment_form();
 
-	
+	 the_comments_pagination(); 
 	
 	
 	
