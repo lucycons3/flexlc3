@@ -35,6 +35,18 @@ if ( ! isset( $content_width ) ) {
 add_theme_support('post-thumbnails');
 set_post_thumbnail_size(1600, 910, true);
 
+	//Default WordPress
+	the_post_thumbnail( 'thumbnail' );     // Thumbnail (150 x 150 hard cropped)
+	the_post_thumbnail( 'medium' );        // Medium resolution (300 x 300 max height 300px)
+	the_post_thumbnail( 'medium_large' );  // Medium Large (added in WP 4.4) resolution (768 x 0 infinite height)
+	the_post_thumbnail( 'large' );         // Large resolution (1024 x 1024 max height 1024px)
+	the_post_thumbnail( 'full' );          // Full resolution (original size uploaded)
+	 
+	//With WooCommerce
+	the_post_thumbnail( 'shop_thumbnail' ); // Shop thumbnail (180 x 180 hard cropped)
+	the_post_thumbnail( 'shop_catalog' );   // Shop catalog (300 x 300 hard cropped)
+	the_post_thumbnail( 'shop_single' );    // Shop single (600 x 600 hard cropped)
+
 //Logo
 function theme_prefix_setup() {
 	
@@ -225,4 +237,9 @@ function FlexLC3_customize_register( $wp_customize ) {
 }
 add_action( 'customize_register', 'FlexLC3_customize_register' );
 
+// fondo 
 
+$args = array(
+	'default-color' => 'fff',
+);
+add_theme_support( 'custom-background', $args );
