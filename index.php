@@ -1,7 +1,3 @@
-﻿<?php get_header(); ?>
-	
-<!--PÁGINA-->
-		
 				<?php get_header(); ?>
 				<div class="row">
 					<div class="col-2 side">
@@ -44,7 +40,7 @@
 							?>
 							
 							<?php else:  ?>
-							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','flexlc3' ); ?></p>
+							<p><?php _e( 'Lo siento no hemos encontrado posts.','flexlc3' ); ?></p>
 							<?php endif; ?>
 					</div>
 				</div>

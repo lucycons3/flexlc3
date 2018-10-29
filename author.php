@@ -12,7 +12,7 @@
 					</div>
 				</div>
 				<?php endwhile; ?>
-				<div class="paginacion"><?php posts_nav_link(' &bull; ','<span class="ultimos">&laquo; Últimos posts</span>','<span class="antiguos">Posts antiguos &raquo;</span>'); ?></div>
+				<div class="paginacion"><?php posts_nav_link(' &bull; ','<span class="ultimos">&laquo; Posts recientes</span>','<span class="antiguos">Posts antiguos &raquo;</span>'); ?></div>
 			
 				<?php 
 				// clean up after the query and pagination
@@ -20,7 +20,7 @@
 				?>
 				
 				<?php else:  ?>
-				<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','flexlc3' ); ?></p>
+				<p><?php _e( 'Lo siento no hemos encontrado posts.','flexlc3' ); ?></p>
 				<?php endif; ?>
 			</div>
 

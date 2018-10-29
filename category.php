@@ -1,7 +1,3 @@
-﻿<?php get_header(); ?>
-	
-<!--PÁGINA-->
-		
 				<?php get_header(); ?>
 				<div class="row">
 					<div class="col-2 side">
@@ -27,8 +23,8 @@
 								'end_size'           => 1,
 								'mid_size'           => 2,
 								'prev_next'          => true,
-								'prev_text'          => __('« Anterior','flexlc3'),
-								'next_text'          => __('Siguiente »','flexlc3'),
+								'prev_text'          => __('&laquo; Anterior','flexlc3'),
+								'next_text'          => __('Siguiente &raquo;','flexlc3'),
 								'type'               => 'plain',
 								'add_args'           => false,
 								'add_fragment'       => '',
@@ -38,7 +34,7 @@
 							
 							echo wp_link_pages($args);?>
 
-						<div class="paginacion"><?php posts_nav_link(' &bull; ','<span class="ultimos">&laquo; Últimos posts</span>','<span class="antiguos">Posts antiguos &raquo;</span>'); ?></div>
+						<div class="paginacion"><?php posts_nav_link(' &bull; ','<span class="ultimos">&laquo; Posts recientes</span>','<span class="antiguos">Posts antiguos &raquo;</span>'); ?></div>
 							
 							<?php 
 							// clean up after the query and pagination
@@ -46,7 +42,7 @@
 							?>
 							
 							<?php else:  ?>
-							<p><?php _e( 'Lo siento no hemos encontrado posts con tu búsqueda.','flexlc3' ); ?></p>
+							<p><?php _e( 'Lo siento no hemos encontrado posts.','flexlc3' ); ?></p>
 							<?php endif; ?>
 					</div>
 				</div>

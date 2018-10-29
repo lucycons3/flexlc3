@@ -1,4 +1,4 @@
-﻿<?php get_header(); ?>
+<?php get_header(); ?>
 			<div class="jumbotron" style="background-image:url('<?php header_image(); ?>');background-position: center center;background-repeat: no-repeat; background-attachment: fixed;background-size:cover;height:400px; padding:0px;">
 				<div class="encate fondopre" style="background:rgba(255,255,255,0.5);margin:0;height:400px;align-items: center;display: flex;">
 					<h1 style="font-size:30pt;margin-left:5%;font-weight:bold;text-align:left;">

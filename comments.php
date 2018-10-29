@@ -1,5 +1,5 @@
- <?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
- <?php wp_list_comments();?>
+<?php if ( is_singular() ) wp_enqueue_script( "comment-reply" ); ?>
+<?php wp_list_comments();?>
 <?php
 	$args = array(
   'id_form'           => 'commentform',
@@ -25,14 +25,14 @@
 
   'logged_in_as' => '<p class="logged-in-as">' .
     sprintf(
-    __( 'Autenticado como <a href="%1$s">%2$s</a>. <a href="%3$s" title="Salir de la cuenta">¿Salir?</a>','flexlc3' ),
+    __( 'Autenticado como <a href="%1$s">%2$s</a>. <a href="%3$s" title="Salir de la cuenta">Salir</a>','flexlc3' ),
       admin_url( 'profile.php' ),
       $user_identity,
       wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
     ) . '</p>',
 
   'comment_notes_before' => '<p class="comment-notes">' .
-    __( 'No publicaremos tu correo electrónico.','flexlc3' ) . ( $req ? $required_text : '' ) .
+    __( 'No publicaremos tu correo electronico.','flexlc3' ) . ( $req ? $required_text : '' ) .
     '</p>',
 
   'comment_notes_after' => '<p class="form-allowed-tags">' .
