@@ -1,9 +1,7 @@
-<!Doctype html>
+<!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 	<head>
 		<link rel="canonical" href="<?php echo esc_url( home_url() );?>">
-		<link rel="alternate" href="<?php echo esc_url( home_url() );?>" hreflang="es">
-		<link rel="alternate" href="<?php echo esc_url( home_url() );?>/en" hreflang="en">
 		
 		<meta http-equiv="Content-Type" content="text/html"; charset="utf-8" />
 		<?php
@@ -42,11 +40,8 @@
 		    }
 		  $twitter_name   = str_replace('@', '', get_the_author_meta('twitter'));
 		?>
-		<meta name="twitter:card" value="summary" />
 		<meta name="twitter:url" value="<?php echo $twitter_url; ?>" />
 		<meta name="twitter:title" value="<?php echo $twitter_title; ?>" />
-		<meta name="twitter:description" value="<?php echo $twitter_desc; ?>" />
-		<meta name="twitter:image" value="<?php echo $twitter_thumb; ?>" />
 		<?php
 		  if($twitter_name) {
 		?>
@@ -55,6 +50,7 @@
 		  }
 		}
 		?>
+		<?php wp_head();?>
 
   	</head>
 
@@ -71,6 +67,8 @@
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	 			<i class="fa fa-bars"></i>
 	 		</a>
+	 		<ul class="redessociales">
+				<li><a class="linkrrss" href="<?php echo get_theme_mod('twitter_account', ''); ?>" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/twitter.png" alt="Twitter de <?php bloginfo('title');?>"></a></li>	
+	 		</ul>
 		</div>
-		<?php wp_head();?>
 	</header>
