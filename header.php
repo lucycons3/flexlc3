@@ -69,6 +69,7 @@
 	 		</a>
 	 		<ul class="redessociales">
 				<li><a class="linkrrss" href="<?php echo get_theme_mod('twitter_account', ''); ?>" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/twitter.png" alt="Twitter de <?php bloginfo('title');?>"></a></li>	
+				<li><a class="linkrrss" href="<?php echo get_theme_mod('github_account', ''); ?>" target="_blank"><img src="<?php echo get_template_directory_uri();?>/images/github-logo.svg" alt="GitHub de <?php bloginfo('title');?>"></a></li>	
 	 		</ul>
 		</div>
 	</header>

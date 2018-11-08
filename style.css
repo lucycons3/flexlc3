@@ -76,6 +76,27 @@ display:flex;
 #menu-arriba{margin:0}
 .espdeb{margin-bottom:3%}
 
+.redessociales{
+	height:20px;
+	float:right;
+	padding-right:5%;
+	width: 15vw;
+}
+
+li img {
+	transition: all ease 0.3s;
+	height:30px
+}
+
+li img:hover {
+	transform: scale(0.8);
+	transform-orgin:center;
+}
+
+.linkrrss {
+	margin:2% 0 !important;
+}
+
 /* Tipos de post */
 .post 
 .page {
