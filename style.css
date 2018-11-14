@@ -137,7 +137,6 @@ a.custom-logo-link{
 
 .fa-bars:before{
 	content:url("images/lineahover.svg");
-	color:white;
 }
 a.logo{
 	padding:0.45em;
