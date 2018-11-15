@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html <?php language_attributes(); ?>>
 	<head>
 		<link rel="canonical" href="<?php echo esc_url( home_url() );?>">
@@ -55,7 +55,6 @@
 		  }
 		}
 		?>
-		<?php wp_head();?>
 
   	</head>
 
@@ -72,8 +71,6 @@
 			<a href="javascript:void(0);" class="icon" onclick="myFunction()">
 	 			<i class="fa fa-bars"></i>
 	 		</a>
-	 		<ul class="redessociales">
-				<li><a href="<?php echo get_theme_mod('twitter_account', ''); ?>"><img src="<?php echo get_template_directory_uri();?>/images/twitter.png" alt="Twitter de <?php bloginfo('title');?>"></a></li>	
-	 		</ul>
 		</div>
+		<?php wp_head();?>
 	</header>

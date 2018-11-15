@@ -252,7 +252,7 @@ function FlexLC3_customize_register( $wp_customize ) {
 		$wp_customize,
 		'my_theme_twitter_account',
 		array(
-			'label' => __( 'Perfil de Twitter', 'flexlc3' ),
+			'label' => __( 'Cuenta de Twitter', 'flexlc3' ),
 			'section'    => 'redessociales',		
 			'settings'   => 'twitter_account',
 			'priority'   => 2,

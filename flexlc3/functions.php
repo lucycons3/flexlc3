@@ -146,11 +146,6 @@ function pagination($pages = '', $range = 4)
 add_action( 'after_setup_theme', 'pagination' );
 
 function FlexLC3_customize_register( $wp_customize ) {
-	
-	$wp_customize->add_section("redessociales", array(
-		"title" => "Redes sociales",
-		"priority" => 20,
-	));
 
 	//color del h1
 	
@@ -237,26 +232,6 @@ function FlexLC3_customize_register( $wp_customize ) {
 			'settings'   => 'base_textcolor',
 			'priority'   => 2,
 			'section'    => 'colors',		
-		)	
-	));
-	
-	//twitter
-	
-	$wp_customize->add_setting('twitter_account', array(
-	'default' => '',
-	'type' => 'theme_mod',
-	'transport' => 'refresh'	
-	));
-	
-	$wp_customize->add_control(new WP_Customize_Color_Control(
-		$wp_customize,
-		'my_theme_twitter_account',
-		array(
-			'label' => __( 'Perfil de Twitter', 'flexlc3' ),
-			'section'    => 'redessociales',		
-			'settings'   => 'twitter_account',
-			'priority'   => 2,
-			'type' => 'text'
 		)	
 	));
 }

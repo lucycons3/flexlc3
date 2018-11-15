@@ -57,6 +57,7 @@ a {
 
 .row {
 margin-bottom:2%;
+display:flex;
 }
 
 .ppal{
@@ -78,7 +79,8 @@ margin-bottom:2%;
 .redessociales{
 	height:20px;
 	float:right;
-	padding-right:5%
+	padding-right:5%;
+	width: 15vw;
 }
 
 li img {
@@ -89,6 +91,10 @@ li img {
 li img:hover {
 	transform: scale(0.8);
 	transform-orgin:center;
+}
+
+.linkrrss {
+	margin:2% 0 !important;
 }
 
 /* Tipos de post */
@@ -131,7 +137,7 @@ a.custom-logo-link{
 
 .fa-bars:before{
 	content:url("images/lineahover.svg");
-	color:white;
+	color:#393939;
 }
 a.logo{
 	padding:0.45em;
@@ -862,8 +868,6 @@ a img.aligncenter {
 		line-height: 1.1em	
 	}	
 	.col-1 , .col-2 , .col-3 , .col-4 , .col-5 , .col-6 , .col-7 , .col-8 , .col-9 , .col-10 , .col-11 , .col-12 {width: 100%;}
-	.prede {
-		padding:0 3%;
-	}
+	
 
 }
